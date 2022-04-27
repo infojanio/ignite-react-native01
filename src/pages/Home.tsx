@@ -15,7 +15,7 @@ export function Home() {
       title: newTaskTitle,
       done: false,
     }
-    setTasks((oldTasks) => [...oldTasks, newTask])
+    setTasks((oldTasks) => [...oldTasks, newTask]) //adiciona a tarefa no final do array
   }
 
   function handleToggleTaskDone(id: number) {
@@ -23,7 +23,8 @@ export function Home() {
   }
 
   function handleRemoveTask(id: number) {
-    //TODO - remove task from state
+    const updatedTasks = tasks.filter((task) => task.id !== id)
+    setTasks(updatedTasks)
   }
 
   return (
