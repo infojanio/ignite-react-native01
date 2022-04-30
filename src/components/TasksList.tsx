@@ -26,6 +26,7 @@ interface TasksListProps {
   removeTask: (id: number) => void
 }
 
+//Lista as tarefas
 export function TasksList({
   tasks,
   toggleTaskDone,
@@ -50,14 +51,15 @@ export function TasksList({
               >
                 <View
                   testID={`marker-${index}`}
-                  //TODO - use style prop
+                  //TODO - caixa de verificação de conclusão da tarefa
                   style={item.done ? styles.taskMarkerDone : styles.taskMarker}
                 >
                   {item.done && <Icon name="check" size={12} color="#FFF" />}
                 </View>
 
                 <Text
-                //TODO - use style prop
+                  //TODO - caixa de verificação de conclusão da tarefa
+                  style={item.done ? styles.taskTextDone : styles.taskText}
                 >
                   {item.title}
                 </Text>
