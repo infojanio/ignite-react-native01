@@ -1,4 +1,4 @@
-## Implementando o 1 desafio do Ignite React Native
+## Implementando desafio 01 do Ignite React Native
 
 - [https://www.notion.so/Desafio-01-Conceitos-do-React-Native-424de969f3274ed5b9b49534b288a04d#8d3825dcbc77434abc0f6e598eb42f52](https://www.notion.so/Desafio-01-Conceitos-do-React-Native-424de969f3274ed5b9b49534b288a04d)
 
@@ -95,7 +95,7 @@ setTasks(updatedTasks)
 
 **Na página `Home.tsx`, você deve implementar a função `handleToggleTaskDone`.** 
 
-- [ ]  Essa função deve receber o `id` de uma tarefa e alterar a propriedade `done` para o inverso do seu valor, ou seja, altere para `true` caso esteja `false` ou altere para `false` caso esteja `true`.
+- [x]   Essa função deve receber o `id` de uma tarefa e alterar a propriedade `done` para o inverso do seu valor, ou seja, altere para `true` caso esteja `false` ou altere para `false` caso esteja `true`.
 
 function handleToggleTaskDone(*id*: *number*) {
 
