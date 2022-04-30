@@ -20,6 +20,14 @@ export function Home() {
 
   function handleToggleTaskDone(id: number) {
     //TODO - toggle task done if exists
+    const updatedTasks = tasks.map((task) => ({ ...task })) //busca todas as tarefas do array
+
+    const foundItem = updatedTasks.find((item) => item.id === id) //busca tarefa concluida
+
+    if (!foundItem) return
+
+    foundItem.done = !foundItem.done //Inverte o done, true e false pelo click
+    setTasks(updatedTasks)
   }
 
   function handleRemoveTask(id: number) {
