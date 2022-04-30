@@ -26,6 +26,7 @@ interface TasksListProps {
   removeTask: (id: number) => void
 }
 
+//Lista as tarefas
 export function TasksList({
   tasks,
   toggleTaskDone,
