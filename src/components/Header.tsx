@@ -2,26 +2,16 @@ import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 import { getStatusBarHeight } from 'react-native-iphone-x-helper'
 
-import logoImg from '../assets/images/logo/logo.png'
-
 interface HeaderProps {
   tasksCounter: number
 }
 
 //Faz a contagem de tarefas no Header
 export function Header({ tasksCounter }: HeaderProps) {
-  //TODO render 'tarefa' if tasksCounter equals 1, otherwise render 'tarefas'
-  /* 
-  let tasksCounterText = 'tarefas'
-  if (tasksCounter === 1) tasksCounterText = 'tarefa'
-  */
-
   const tasksCounterText = tasksCounter === 1 ? 'tarefa' : 'tarefas'
 
   return (
     <View style={styles.container}>
-      <Image source={logoImg} />
-
       <View style={styles.tasks}>
         <Text style={styles.tasksCounter}>Você tem </Text>
         {
@@ -36,8 +26,9 @@ export function Header({ tasksCounter }: HeaderProps) {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: getStatusBarHeight(true) + 16,
+    paddingTop: getStatusBarHeight(true) + 2,
     paddingHorizontal: 24,
+
     paddingBottom: 60,
     backgroundColor: '#8257E5',
     justifyContent: 'space-between',
